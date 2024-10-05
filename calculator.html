@@ -1,0 +1,68 @@
+<html>
+ <head>
+ <title> Simple calculator </title>
+ <script>
+ function get(info)
+ {
+ var lastexp=document.getElementById("result").value;
+ var next_exp=lastexp+info;
+ document.getElementById("result").value=next_exp;
+ }
+ function calculate()
+ {
+ var result_value=document.getElementById("result").value
+ var res=eval(result_value)
+ document.getElementById("result").value=res
+ }
+ function cl()
+ {
+ document.getElementById("result").value=""
+ }
+ </script>
+ <style>
+ input[type="button"]
+ {
+ background-color: tan;
+ color: white;
+ border: solid 2px white;
+ width: 100%;
+ }
+ </style>
+ </head>
+ <body>
+ <center>
+ <h1> SIMPLE CALCULATOR</h1>
+ <hr>
+ <table border="2">
+ <tr>
+ <td colspan="3"><input type="text" id="result" readonly></td>
+ <td> <input type="button" value="c" onclick="cl()"/></td>
+ </tr>
+ <tr>
+ <td> <input type="button" value="1" onclick="get('1')"/></td>
+ <td> <input type="button" value="2" onclick="get('2')"/></td>
+ <td> <input type="button" value="3" onclick="get('3')"/></td>
+ <td> <input type="button" value="/" onclick="get('/')"/></td>
+ </tr>
+ <tr>
+ <td> <input type="button" value="4" onclick="get('4')"/></td>
+ <td> <input type="button" value="5" onclick="get('5')"/></td>
+ <td> <input type="button" value="6" onclick="get('6')"/></td>
+ <td> <input type="button" value="+" onclick="get('+')"/></td>
+ </tr>
+ <tr>
+ <td> <input type="button" value="7" onclick="get('7')"/></td>
+ <td> <input type="button" value="8" onclick="get('8')"/></td>
+ <td> <input type="button" value="9" onclick="get('9')"/></td>
+ <td> <input type="button" value="-" onclick="get('-')"/></td>
+ </tr>
+ <tr>
+ <td> <input type="button" value="." onclick="get('.')"/></td>
+ <td> <input type="button" value="0" onclick="get('0')"/></td>
+ <td> <input type="button" value="=" onclick="calculate()"/></td>
+ <td><input type="button" value="*" onclick="get('*')"/></td>
+ </tr>
+ </table>
+ </center>
+ </body>
+</html
